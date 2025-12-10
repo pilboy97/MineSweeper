@@ -48,8 +48,6 @@ public class CellView : MonoBehaviour, ICellView, IPointerDownHandler
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             _presenter.HandleLeftClick(pos.x, pos.y);
-            
-            Debug.Log($"{pos.x}, {pos.y}");
         }
     }
 }

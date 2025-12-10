@@ -47,6 +47,11 @@ public class GameManager : Singletone<GameManager>
     private void Update()
     {
         timePast += Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            cheatMode = !cheatMode;
+        }
     }
 
     void Start()

@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class GameBoardModel
 {
-    private readonly Cell[,] _cells = new Cell[GameManager.GridRow, GameManager.GridCol];
+    private Cell[,] _cells = new Cell[GameManager.GridRow, GameManager.GridCol];
 
     public Action OnUpdateGameBoard = () => { };
 
@@ -39,7 +39,8 @@ public class GameBoardModel
     
     public void InitBoard()
     {
-        Debug.Log("initBoard");
+        _cells = new Cell[GameManager.GridRow, GameManager.GridCol];
+        
         for (int i = 0; i < GameManager.GridRow; i++)
         {
             for (int j = 0; j < GameManager.GridCol; j++)
